@@ -9,7 +9,9 @@ RUN apk update && \
       unzip \
       curl \
       aws-cli \
-      openssh-client
+      openssh-client \
+      bash \
+      grep
 
 RUN cd /tmp && \
     wget "https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip" && \
