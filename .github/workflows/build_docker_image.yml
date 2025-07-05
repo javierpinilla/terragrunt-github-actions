@@ -34,8 +34,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKER_HUB_USERNAME }}/${{ github.repository }}:latest
-            ${{ secrets.DOCKER_HUB_USERNAME }}/${{ github.repository }}:${{ github.sha }}
+            ${{ secrets.DOCKER_HUB_USERNAME }}/${{ github.event.repository.name }}:latest
+            ${{ secrets.DOCKER_HUB_USERNAME }}/${{ github.event.repository.name }}:${{ github.sha }}
           labels: |
             org.opencontainers.image.source=https://github.com/ ${{ github.repository }}
             org.opencontainers.image.version=latest
